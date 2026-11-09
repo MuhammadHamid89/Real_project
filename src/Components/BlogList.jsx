@@ -1,5 +1,22 @@
+
+// import BlogCard from "./BlogCard"
+// export default function BlogList({blogs}){
+//     return(
+//         <>
+//         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+//             {blogs.map((blog)=>(
+//                 <BlogCard key={blog.id}  title={blog.title} description={blog.description} image={blog.image}/>
+//             ))}
+//         </div>
+//         </>
+//     )
+// }
+
+
+import { useSelector } from "react-redux"
 import BlogCard from "./BlogCard"
-export default function BlogList({blogs}){
+export default function BlogList(){
+    const blogs=useSelector((state)=>state.blog.blogs)
     return(
         <>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

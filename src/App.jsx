@@ -24,17 +24,21 @@ import Footer from "./Components/Footer"
 import {  blogs as initialBlog} from "./data/blogs"
 export default function App(){
     const [blogs,setBlogs]=useState(initialBlog)
-    const addBlog= (newBlog)=>{
-            setBlogs([newBlog, ...blogs])
-    }
+
+
+    // const addBlog= (newBlog)=>{
+    //         setBlogs([newBlog, ...blogs])
+    // }
     return(
         <>
         <div className="min-h-screen bg-gray-50 text-gray-800">
             <Header />
             <Routes>
                 <Route path="/" element={ <Home />} />
-                <Route path="/blogs" element={<Blogs blogs={blogs} />} />
-                <Route path="/add-blog" element={<AddBlog addBlog={addBlog} />} />
+                {/* <Route path="/blogs" element={<Blogs blogs={blogs} />} /> */}
+                {/* <Route path="/add-blog" element={<AddBlog addBlog={addBlog} />} /> */}
+                <Route path="/blogs" element={<Blogs />} />
+                <Route path="/add-blog" element={<AddBlog />} />
             </Routes>
             <Footer />
         </div>
