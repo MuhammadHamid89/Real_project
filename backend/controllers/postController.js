@@ -1,4 +1,8 @@
+//postman link Get :(http://localhost:3000/api/posts) postman my params my ye likhna hain 
+// category:React, search:getting start with react, sort:lates
+
 //yaha javascript k function hoty hain
+
 import { NavigationType } from "react-router-dom";
 import posts from "../data/posts.js";
 const getPosts= (req,res) =>{
